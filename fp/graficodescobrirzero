@@ -1,0 +1,53 @@
+import math
+
+def findRoot(f, precision, start, end):
+    """Find by aproximation a root in function 'f' in an interval defined by
+    'start' and 'end', in steps of 'precision'"""
+    
+    # Encontrar o número de casas decimais em 'precision'
+    # Fazemos isto convertendo 'precision' num string para usar len() e index()
+    dec = str(precision)
+    if '.' in dec:
+        dec = len(dec[dec.index('.') +1 :])
+    else:
+        dec = 0
+    
+    # Criar uma lista de valores x, em incrementos de 'precision'
+    xx = []
+    x = start
+    while x <= end:
+        xx.append(x)
+        # Arredondamos para o número de casas decimais em 'precision' para
+        # evitar imprecisões causadas por números do tipo float
+        x = round(x + precision, dec)
+    
+    # Fazer a pesquisa enquanto a amplitude do intervalo é maior que 'precision'
+    dif = end - start
+    while dif > precision:
+        # Dividir xx em duas metades
+        xx1 = xx[:len(xx)//2 + 1]
+        xx2 = xx[len(xx)//2 + 1:]
+        # Encontrar a metade que ainda verifica o teorema de Bolzano
+        # f é uma função dada pelos argumentos
+        if (f(xx1[0]) > 0 and f(xx1[-1]) < 0) or (f(xx1[0]) < 0 and f(xx1[-1]) > 0):
+            xx = xx1.copy()
+        elif (f(xx2[0]) > 0 and f(xx2[-1]) < 0) or (f(xx2[0]) < 0 and f(xx2[-1]) > 0):
+            xx = xx2.copy()
+        else:
+            # Nenhuma das listas verifica o teorema de Bolzano - provavelmente
+            # porque o 'precision' fornecido é demasiado alto
+            return xx[len(xx)//2]
+        # Atualizar dif
+        dif = xx[-1] - xx[0]
+    
+    return xx[len(xx)//2]
+
+
+# Definir a função a ser testada
+f = lambda x: x + math.sin(10*x)
+
+print(findRoot(f, 0.01, 0.2, 0.4))    # pouca precisão
+print(findRoot(f, 0.0001, 0.2, 0.4))  # mais preciso
+
+print(findRoot(f, 0.01, 0.4, 0.6))    # pouca precisão
+print(findRoot(f, 0.0001, 0.4, 0.6))  # mais preciso

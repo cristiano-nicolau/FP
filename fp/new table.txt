@@ -1,0 +1,20 @@
+Numero                                                Nome                                                Nota
+ 10679                               JOAO MANUEL MOREIRA CONCEICAO ANDRADE                                12.5
+ 23973                                   BARBARA MARTINS BASTIAO PIRES                                     8.2
+ 24983                             SANDRA ELISABETE PINHEIRO MORGADO CORREIA                               8.4
+ 30759                               ELISABETE CLAUDIA SANTOS SILVA SOARES                                16.5
+ 33955                           NUNO JOSE SILVA DOS SANTOS MAGALHAES DA COSTA                             9.5
+ 34385                                       NARCISO RESENDE SILVA                                         8.1
+ 34801                                     ABEL LUIS DIAS CARAPICHOSO                                     15.7
+ 35007                                   SANDRA CRISTINA LEAL DA GRACA                                    14.3
+ 36700                                    DAVID JOAO CASTILLO CARVALHO                                    10.2
+ 37347                                        ROBERT DE FERNANDES                                         11.2
+ 38063                                  RUI MIGUEL ALVES FERNANDES PALHA                                  11.3
+ 38461                                JOSE MANUEL VIEIRA DE ALMEIDA RAMOS                                 15.2
+ 39450                                   RUI BARBOSA SOARES FIGUEIREDO                                    12.9
+ 39652                                      FABIO ANDRE SABINO REAL                                       11.4
+ 40747                                      JOEL DOS SANTOS MIRANDA                                       17.0
+ 42003                                    LUIS CARLOS FIGUEIREDO PAULO                                    16.6
+ 42304                                         JOAO PEDRO PEREIRA                                         17.3
+ 42847                                     NELSON MIGUEL BREDA COELHO                                     11.1
+ 43021                                     NUNO MIGUEL MOGAS DA SILVA                                     14.9
